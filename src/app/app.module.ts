@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MarketWatcherComponent } from './market-watcher/market-watcher.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { LinksComponent } from './links/links.component';
+import { BioComponent } from './bio/bio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MarketWatcherComponent,
     BackdropComponent,
-    LinksComponent
+    LinksComponent,
+    BioComponent
   ],
   imports: [
     BrowserModule,
