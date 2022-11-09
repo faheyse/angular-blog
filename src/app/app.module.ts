@@ -8,6 +8,8 @@ import { BackdropComponent } from './backdrop/backdrop.component';
 import { LinksComponent } from './links/links.component';
 import { BioComponent } from './bio/bio.component';
 import { HomeComponent } from './home/home.component';
+import { BooksComponent } from './books/books.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { HomeComponent } from './home/home.component';
     BackdropComponent,
     LinksComponent,
     BioComponent,
-    HomeComponent
+    HomeComponent,
+    BooksComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
