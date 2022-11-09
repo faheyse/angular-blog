@@ -7,6 +7,7 @@ import { FinanceComponent } from './finance/finance.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { LinksComponent } from './links/links.component';
 import { BioComponent } from './bio/bio.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BioComponent } from './bio/bio.component';
     FinanceComponent,
     BackdropComponent,
     LinksComponent,
-    BioComponent
+    BioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
