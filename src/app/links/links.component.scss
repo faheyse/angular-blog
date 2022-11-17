@@ -1,0 +1,121 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #070707;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 200px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right:10px;
+  }
+
+  .card svg.material-icons path {
+    fill: #33fff5;
+    
+  }
+
+  .card-container {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+
+
+  .card {
+    all: unset;
+    border-radius: 4px;
+    border: 1px solid #14162b;
+    background-color: #14162b;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 15px;
+    padding: 20px;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 15px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+    opacity: 100%;
+    margin-left: 7px;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: default;
+    color:#33fff5 ; 
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+  .card-container .card:not(.highlight-card):hover .material-icons path {
+    fill: #33fff5;
+  }
+
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 767px) {
+        .card-container > *:not(.circle-link) ,
+    
+    
+        .card:not(.highlight-card) {
+          height: 16px;
+          margin: 1px 0;
+    
+        }
+    
+        .card.highlight-card span {
+          margin-left: 70px;
+        }
+    
+    
+      }
+    
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 48 ; 
+          margin-right:10px;
+        }
