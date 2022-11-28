@@ -10,6 +10,7 @@ import { BioComponent } from './bio/bio.component';
 import { HomeComponent } from './home/home.component';
 import { BooksComponent } from './books/books.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { CvComponent } from './cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     BioComponent,
     HomeComponent,
     BooksComponent,
-    TimelineComponent
+    TimelineComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,
