@@ -1,5 +1,7 @@
-
 <body>
-    <h1>Curriculum Vitae</h1>
-    <app-section [headings]="headings"></app-section>
+    <h1 >Curriculum Vitae</h1>
+    <app-section [theme_text]="text" [theme_background]="background"></app-section>
+    <div class="toggle-container">
+        <button (click)="toggle()">Toggle page colour</button>
+    </div>
 </body>

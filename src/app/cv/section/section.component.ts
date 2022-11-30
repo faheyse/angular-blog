@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { CvComponent} from '../cv.component';
 @Component({
   selector: 'app-section',
   templateUrl: './section.component.html',
@@ -6,10 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SectionComponent implements OnInit {
 
-  @Input() headings!:string[] ; 
 
+  @Input() theme_background!:string ;
+  @Input() theme_text!:string ; 
+  // @Output() section.background!:string;
+  // @Output() section.text!:string ;
+  // section:CvComponent = new CvComponent() ;
+  //@Output() section.background ; 
+  // @Output() section.text:string = this.section.section.text ; 
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }

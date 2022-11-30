@@ -1,5 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
-//import {SectionComponent} from './section/section.component';
+import { Component, OnInit, Output, Input } from '@angular/core';
+import {SectionComponent} from './section/section.component';
+
+
 
 @Component({
   selector: 'app-cv',
@@ -8,12 +10,46 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class CvComponent implements OnInit {
 
-  @Output() headings:string[] = ["Sean Fahey", "Education & Qualifications", "Work Experience", "Language Skills"] ; 
+  colour:number = 0 ; 
+  @Output() background:string = "black"; 
+  @Output() text:string  = "white";
 
-//@Output() 
-// write bio and info in txt files, extract and use *ngIf statements to extract data from files and put into HTML
+  toggle():void {
+    this.colour += 1 ; 
+    this.colour = this.colour % 5 ; 
+    this.invert() ; 
+  }
 
-  constructor() { }
+  invert():void {
+  if (this.colour === 0) {
+    this.background = "black"; 
+    this.text ="white"; 
+  }
+
+  else if (this.colour == 1) {
+    this.background = "white"; 
+    this.text ="black"; 
+  }
+
+  else if (this.colour == 2) {
+    this.background = "grey"; 
+    this.text ="white"; 
+  }
+
+  else if (this.colour == 3) {
+    this.background = "purple"; 
+    this.text ="white"; 
+  }
+
+  else if (this.colour == 4) {
+    this.background = "navy"; 
+    this.text ="white"; 
+  }
+
+  }
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
