@@ -8,7 +8,7 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class CvComponent implements OnInit {
 
-  @Output() headings:string[] = ["Contact", "Background", "Qualifications"] ; 
+  @Output() headings:string[] = ["Sean Fahey", "Education & Qualifications", "Work Experience", "Language Skills"] ; 
 
 //@Output() 
 // write bio and info in txt files, extract and use *ngIf statements to extract data from files and put into HTML

@@ -8,7 +8,7 @@ a {
     all: unset;
     border-radius: 0px;
     border: 3px solid #5f5f5f;
-    background-color: rgb(103, 103, 103) ; 
+    background-color: rgb(2, 1, 1) ; 
     height: 700px;
     width: 600px;
     margin-top: 2px;
@@ -19,7 +19,7 @@ a {
     align-items: top;
     z-index: -11;
     color: white;
-    text-align: left;
+    text-align: center;
   }
 
   .card-container {
@@ -37,4 +37,14 @@ a {
 
   .card-container .card:not(.highlight-card) {
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
+
+  .content-card {
+    padding: 20px ; 
+    position: relative ; 
+    flex-direction: column;
+    text-align: left;
+    margin-top: 10px ;
+    font-family: 'IBM Plex Serif', sans-serif;
   }

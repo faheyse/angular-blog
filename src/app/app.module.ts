@@ -12,6 +12,7 @@ import { BooksComponent } from './books/books.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { CvComponent } from './cv/cv.component';
 import { SectionComponent } from './cv/section/section.component';
+import { LcComponent } from './cv/lc/lc.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SectionComponent } from './cv/section/section.component';
     BooksComponent,
     TimelineComponent,
     CvComponent,
-    SectionComponent
+    SectionComponent,
+    LcComponent
   ],
   imports: [
     BrowserModule,
