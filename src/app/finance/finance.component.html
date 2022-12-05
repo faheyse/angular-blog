@@ -1,14 +1,23 @@
 <head>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
 </head>
 
 <div class="whiteboard">
-  <div [mathjax]="content"></div>
+  <div [mathjax]="black_scholes" style="font-size:29 ;"></div>
 </div>
 
+<div class="textbox">
+  <h2>
+    Black-Scholes Model
+  </h2>
+  <p>
+    
+  </p>
+</div>
 
-  <div class="chart-container">
-    <div echarts [options]="options" class="demo-chart"></div>
-  </div>
+<div class="chart-container">
+  <div echarts [options]="options" class="demo-chart"></div>
+</div>
 

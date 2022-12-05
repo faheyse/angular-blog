@@ -11,7 +11,7 @@ export class FinanceComponent implements OnInit {
   options!: any;
   ticker:string = 'GOOG'; 
 
-  content = "$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$";
+  black_scholes = "$ \\frac{\\partial V}{\\partial t} + \\frac{1}{2}\\sigma^2 S^2 \\frac{\\partial^2 V}{\\partial S^2} + rS\\frac{\\partial V}{\\partial S} -rV = 0 $";                              
 
   constructor() { }
 
