@@ -3,9 +3,9 @@
      <div class="page" [ngStyle]="{'background-color':theme_background , 'color':theme_text}">             <!-- COLOUR -->
       <h2 [ngStyle]="{'color':theme_text}" style="height:20px ; position:relative; z-index:10;">Sean Fahey</h2>
       <div style="height:1pt; width:550px ;position:relative; top:15px ; left:20px ;" [ngStyle]="{'background-color':theme_text}">
-        <div class="content-card" [ngStyle]="{'background-color':theme_background}" [ngStyle]="{'color':theme_text}">
+        <div class="content-card" [ngStyle]="{'background-color':theme_background,'color':theme_text}">
           <p style="line-height: 10px;" [ngStyle]="{'color':theme_text}"><b>D.O.B:</b>&nbsp;&nbsp;27.09.2000</p>
-          <p style="line-height:10px ;margin-bottom:40px;" [ngStyle]="{'color':theme_text}"><b>Email:</b>&nbsp;&nbsp;<a [ngStyle]="{'color':theme_text}" href="mailto:faheyse@tcd.ie">faheyse@tcd.ie</a></p>
+          <p style="line-height:10px ;margin-bottom:40px;" [ngStyle]="{'color':theme_text}"><b>Email:</b><a [ngStyle]="{'color':theme_text}" href="mailto:faheyse@tcd.ie">&nbsp;&nbsp;faheyse@tcd.ie</a></p>
           <p [ngStyle]="{'color':theme_text}">Currently completing my 4th year in Electronic & Computer Engineering in Trinity College Dublin. Competent in several programming languages, electrical systems,
             mathematics, and engineering design process. Good at working in teams, and can self-manage deadlines. 
           </p>
@@ -21,7 +21,7 @@
         <div style="height:1pt; width:550px ;position:relative; top:15px ; left:20px ;" [ngStyle]="{'background-color':theme_text}">
           <div class="content-card">
             <p [ngStyle]="{'color':theme_text}" style="margin-bottom:20px;"><b>languages:</b> Python, Go, Typescript, C/C++, R, MATLAB, Wolfram, HTML, CSS</p>
-            <p [ngStyle]="{'color':theme_text}" style="margin-bottom:25px;"><b>UCD Entrance Scholar 2019</b> having scored 613 points in the <a href="../../../assets/LeavingCert_2019.pdf" target="tab"><u>Leaving Certificate</u></a></p>
+            <p [ngStyle]="{'color':theme_text}" style="margin-bottom:25px;"><b>UCD Entrance Scholar 2019</b> having scored 613 points in the <a href="../../../assets/LeavingCert_2019.pdf" target="tab"><u [ngStyle]="{'color':theme_text}">Leaving Certificate</u></a></p>
             <h3 [ngStyle]="{'color':theme_text}" style="margin-bottom: 0px">2019-2021</h3>
             <p [ngStyle]="{'color':theme_text}" style="margin-bottom:25px;margin-top:5px;">Attended 1<sup>st</sup> and 2<sup>nd</sup> year in UCD to study Electrical Engineering</p>
             <h3 [ngStyle]="{'color':theme_text}" style="margin-bottom:0px;">2021-</h3>

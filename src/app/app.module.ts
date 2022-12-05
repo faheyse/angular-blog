@@ -13,6 +13,9 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { CvComponent } from './cv/cv.component';
 import { SectionComponent } from './cv/section/section.component';
 import { LcComponent } from './cv/lc/lc.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { MathjaxModule } from "mathjax-angular";
+
 
 @NgModule({
   declarations: [
@@ -30,9 +33,14 @@ import { LcComponent } from './cv/lc/lc.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    }),
+    MathjaxModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

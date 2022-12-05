@@ -1,7 +1,14 @@
-<p>finance section!</p>
+<head>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+</head>
 
-<!-- @Input() page =  -->
-<!-- <app-backdrop [page]="finance" 
-    show finance home page
--->
+<div class="whiteboard">
+  <div [mathjax]="content"></div>
+</div>
+
+
+  <div class="chart-container">
+    <div echarts [options]="options" class="demo-chart"></div>
+  </div>
 

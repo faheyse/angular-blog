@@ -1,7 +1,13 @@
+<head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  </head>
 <body>
     <h1 >Curriculum Vitae</h1>
     <app-section [theme_text]="text" [theme_background]="background"></app-section>
     <div class="toggle-container">
-        <button (click)="toggle()">Toggle page colour</button>
+        <button class="mdc-button mdc-button--raised" (click)="toggle()" style=" background-color: white ;  color: black; width:170px; height:40px;">
+            <span class="mdc-button__label">Toggle page colour</span>
+          </button>
     </div>
 </body>
