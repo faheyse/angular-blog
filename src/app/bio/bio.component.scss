@@ -1,13 +1,13 @@
 .bio-container {
+    position: absolute;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 10px;
-    position: relative;
     left: 550px ; 
-    top: 110px; 
+    top: 15%; 
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 30px;
     z-index: 50;
-    width: 800px;
-    height: 300px;
+    width: 44%;
+    height: 50%;
+    margin-left: 20% ;
 }

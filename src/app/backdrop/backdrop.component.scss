@@ -21,6 +21,23 @@
   .spacer {
     flex: 100;
   }
+
+
+  .bg {
+    position: absolute;
+    margin: 0%;
+    padding: 0%;
+    width: 100% ; 
+    height:100% ; 
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    // background-color:green;
+    font-weight: 850;
+    // z-index: 5;
+}
   
 
   .toolbar {
@@ -44,10 +61,12 @@
 
   
   .circle-container {
+    position:absolute ; 
+    top:8% ;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top:80px;
+    margin-top:8px;
     flex-direction: row;
   }
 
