@@ -1,21 +1,39 @@
 <head>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </head>
 <!-- Toolbar -->
 
-<div class="toolbar" role="banner">
-  <img
-    width="110"
-    alt="Angular Logo"
-    src="../favicon.ico"
-  />
+<div class="toolbar" role="banner" [ngStyle]="{'background-color': toggle_text, color:toolbar_text}">
+  <div *ngIf="mode">
+    <img
+      width="110"
+      alt="Angular Logo"
+      src="../../assets/palm_black.jpg"
+    />
+  </div>
+  <div *ngIf="!mode">
+    <img
+      width="110"
+      alt="Angular Logo"
+      src="../../assets/palm_white.jpg"
+    />
+  </div>
   <span>Blog</span>
     <div class="spacer"></div>
+
+    <div class="bg-mode-container">
+      <button class="mdc-button mdc-button--raised" (click)="clickUpdate()" [ngStyle]="{'background-color': background_colour}" style="width:150px; height:45px; border-radius:10px ;">
+          <span style="  font-family: 'IBM Plex Sans', sans-serif; font-weight:550; font-size:14;" [ngStyle]="{'color':toggle_text}">Toggle Theme</span>
+        </button>
+    </div>
 </div>
 
 
-<div [ngStyle]="{'background-color': background}" class="bg">
+<div class="bg" [ngStyle]="{'background-color':background_colour}">
 
     <!-- Links -->
     <div class="circle-container">
@@ -34,7 +52,7 @@
 
     </div>
 
-  <app-links></app-links>
-  <app-bio></app-bio>
+  <app-links [text_colour]="background_colour" [bg_colour]="toggle_text"></app-links>
+  <app-bio [text_colour]="toggle_text"></app-bio>
 
 </div>

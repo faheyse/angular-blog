@@ -37,10 +37,14 @@ import { MathjaxModule } from "mathjax-angular";
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts')
     }),
-    MathjaxModule.forRoot(),
+    MathjaxModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    
+  ]
 })
 export class AppModule { }
+
 

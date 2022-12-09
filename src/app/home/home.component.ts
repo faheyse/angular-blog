@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +7,10 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
-  @Output() background_colour:string = "black" ; 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
