@@ -39,12 +39,12 @@ import { MathjaxModule } from "mathjax-angular";
     }),
     MathjaxModule.forRoot()
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent],
   exports: [
     
   ]
 })
 export class AppModule { }
-
 
