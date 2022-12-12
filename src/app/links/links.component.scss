@@ -73,6 +73,11 @@
     z-index: 20;
   }
 
+  .card-container .card-cv:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  }
+
   .card-cv svg.material-icons path {
     fill: #33fff5;
   }
@@ -88,12 +93,12 @@
     margin-left: 7px;
   }
 
-  .card-container .card:not(.highlight-card) {
+  .card-container .card {
     cursor: pointer;
     color:#33fff5 ; 
   }
 
-  .card-container .card:not(.highlight-card):hover {
+  .card-container .card:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }

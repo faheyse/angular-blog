@@ -14,6 +14,10 @@ export class FinanceComponent implements OnInit {
 
 
   black_scholes = "$ \\frac{\\partial V}{\\partial t} + \\frac{1}{2}\\sigma^2 S^2 \\frac{\\partial^2 V}{\\partial S^2} + rS\\frac{\\partial V}{\\partial S} -rV = 0 $"; 
+  call = "$ C(S_t, t) = N(d_1)S_t - N(d_2)Ke^{-r(T-t)} $" ; 
+  put = "$ P(S_t, t) = N(-d_2)Ke^{-r(T-t)} - N(-d_1)S_t $" ;
+  d1 = "$ d_1 = \\frac{1}{\\sigma\\sqrt{T-t}}[ln(\\frac{S_t}{K}) + (r + \\frac{\\sigma^{2}}{2})(T-t)] $" ; 
+  d2 = "$ d_2 = d_1 - \\sigma\\sqrt{T-t} $"; 
 
 constructor() {}
 
