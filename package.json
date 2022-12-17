@@ -27,6 +27,7 @@
     "ngx-highlightjs": "^7.0.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "webkit": "0.0.0",
     "yahoo-finance": "^0.3.7",
     "zone.js": "~0.11.4"
   },
