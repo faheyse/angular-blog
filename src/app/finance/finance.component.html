@@ -25,7 +25,14 @@
     </p>
   </div>
 
-<div style="width:100%; position:absolute; top:40%;margin-top:5%">
+<div style="width:100%; position:absolute; top:40%;margin-top:1%">
+
+
+  <div class="btn-group">
+    <button [ngStyle]="{'background-color':button_bg[0]}" (click)="select(0)">GOOG</button>
+    <button [ngStyle]="{'background-color':button_bg[1]}" (click)="select(1)">AAPL</button>
+    <button [ngStyle]="{'background-color':button_bg[2]}" (click)="select(2)">MSFT</button>
+  </div>
 
   <div class="chart-container">
     <div echarts [options]="options" class="demo-chart"></div>

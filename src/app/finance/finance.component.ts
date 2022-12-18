@@ -9,7 +9,8 @@ import stock_data from "./stock_data.json" ;
 })
 export class FinanceComponent implements OnInit {
   options!: any;
-  ticker:string = 'GOOG'; 
+  sel:number = 0; 
+  button_bg!:string [] ; 
 
 
 
@@ -22,16 +23,44 @@ export class FinanceComponent implements OnInit {
 constructor() {}
 
   ngOnInit(): void {
-    const xAxisData = [];
-    const L = stock_data.GOOG["share_price"].length ; 
+    this.graph(this.sel) ; 
+}
 
-    for (let i = 0; i < L; i++) {
+
+  select(s:number) {
+      this.sel = s ; 
+      this.graph(this.sel) ; 
+  }
+
+  graph(sel:number){
+    const xAxisData = [];
+    var stock:any ; 
+    let ticker:string = "" ; 
+    switch(sel){
+      case 0:
+        ticker = "GOOG" ; 
+        stock = stock_data.GOOG["share_price"] ; 
+        this.button_bg =  ["#939393", "#ededed", "#ededed"] ; 
+        break;
+      case 1:
+        ticker = "AAPL" ;
+        stock = stock_data.AAPL["share_price"] ; 
+        this.button_bg =  ["#ededed", "#939393", "#ededed"] ; 
+        break;
+      case 2:
+        ticker = "MSFT" ; 
+        stock = stock_data.MSFT["share_price"] ; 
+        this.button_bg =  ["#ededed", "#ededed", "#939393"] ; 
+        break;
+    }
+
+    for (let i = 0; i < stock.length; i++) {
       xAxisData.push(i);
     }
 
     this.options = {
       legend: {
-        data: [this.ticker, "call", "put"],
+        data: [ticker, "call", "put"],
         align: 'left',
       },
       tooltip: {},
@@ -45,7 +74,7 @@ constructor() {}
       yAxis: {},
       series: [
         {
-          name: this.ticker,
+          name: ticker,
           type: 'line',
           data: stock_data.GOOG["share_price"],
           animationDelay: (idx:any) => idx * 3,
@@ -66,6 +95,25 @@ constructor() {}
       animationEasing: 'elasticOut',
       animationDelayUpdate: (idx:any) => idx * 5,
     };
+
+    switch (sel) {
+      case 0:
+        this.options.series[0].data = stock_data.GOOG["share_price"] ; 
+        this.options.series[1].data = stock_data.GOOG["call"] ; 
+        this.options.series[2].data = stock_data.GOOG["put"] ; 
+        break;
+      case 1:
+        this.options.series[0].data = stock_data.AAPL["share_price"] ; 
+        this.options.series[1].data = stock_data.AAPL["call"] ; 
+        this.options.series[2].data = stock_data.AAPL["put"] ; 
+        break;
+      case 2:
+        this.options.series[0].data = stock_data.MSFT["share_price"] ; 
+        this.options.series[1].data = stock_data.MSFT["call"] ; 
+        this.options.series[2].data = stock_data.MSFT["put"] ; 
+        break;
+    }
   }
+
 
 }

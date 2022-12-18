@@ -4,7 +4,7 @@
     position:relative ; 
     top:25%; 
     left:10% ; 
-    margin-top: 7%;
+    margin-top: 2%;
     margin-bottom: 5%;
 }
 
@@ -49,3 +49,33 @@ article {
     padding-left: 2%;
     padding-bottom: 2%;
 }
+
+
+.btn-group button {
+    background-color: #ededed; 
+    border: 1px solid rgb(202, 202, 202); 
+    color: rgb(84, 84, 84); 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+    margin-top:1% ; 
+    position: relative;
+    left:17% ; 
+    margin-top:10%;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+  button:hover {
+    opacity:1
+  }
