@@ -10,9 +10,6 @@ install_dep:
   stage: install_dependencies
   image: node:14
   script:
-  - npm cache clean --force
-  - rm package-lock.json 
-  - npm ci
   - npm install
 
 install_ang:
