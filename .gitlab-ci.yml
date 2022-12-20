@@ -1,27 +1,19 @@
+# The Docker image that will be used to build your app
 image: node:14.20.1
-
-stages:            # List of stages for jobs, and their order of execution
- - install_dependencies
- - install_angular
- - build
- 
-
-install_dep:
-  stage: install_dependencies
-  image: node:14
-  script:
+# Functions that should be executed before the build script is run
+before_script:
   - npm install
-
-install_ang:
-  stage: install_angular
-  image: node:14
-  script:
   - npm install -D typescript @angular/cli @angular/compiler
   - npm link @angular/cli
-
-build_ang:
-  stage: build
-  image: node:14
-  script:
   - npm i
-  - npm run build
+pages:
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  rules:
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
