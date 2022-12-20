@@ -1,14 +1,25 @@
-image: node:14.15.0
-pages:
-  cache:
-    paths:
-      - node_modules/
+image: node:14.17.0
+
+stages:            # List of stages for jobs, and their order of execution
+ - install_dependencies
+ - install_angular
+ - build
+ 
+
+install_dep:
+  stage: install_dependencies
+  image: node:14
   script:
-    - npm install -g @angular/cli@14.2.8
-    - npm install
-    - ng build
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+  - npm install
+
+install_ang:
+  stage: install_angular
+  image: node:14
+  script:
+  - npm install -D typescript @angular/cli @angular/compiler
+
+build_ang:
+  stage: build
+  image: node:14
+  script:
+  - npm run build
