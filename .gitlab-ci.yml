@@ -1,4 +1,4 @@
-image: node:16.17.0
+image: node:14.20.1
 
 stages:            # List of stages for jobs, and their order of execution
  - install_dependencies
