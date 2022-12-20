@@ -1,14 +1,20 @@
-image: node:16.17.0
+image: node:14.15.0
 pages:
   cache:
     paths:
       - node_modules/
   script:
-    - npm install -g @angular/cli@14.2.8
-    - npm install
-    - npm run build
-  artifacts:
-    paths:
-      - public
-  only:
-    - main
+  - npm install
+
+install_ang:
+  stage: install_angular
+  image: node:14
+  script:
+  - npm install -D typescript @angular/cli @angular/compiler
+  - npm link @angular/cli
+
+build_ang:
+  stage: build
+  image: node:14
+  script:
+  - npm run build
