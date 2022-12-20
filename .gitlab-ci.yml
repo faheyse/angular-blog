@@ -1,4 +1,4 @@
-image: node:14.15.0
+image: nginx:1.17.1-alpine
 pages:
   stage: deploy
   script:
