@@ -17,6 +17,7 @@ install_ang:
   image: node:14
   script:
   - npm install -D typescript @angular/cli @angular/compiler
+  - npm link @angular/cli
 
 build_ang:
   stage: build
