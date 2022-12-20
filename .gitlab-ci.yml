@@ -8,19 +8,19 @@ stages:            # List of stages for jobs, and their order of execution
 
 install_dep:
   stage: install_dependencies
-  image: node:16
+  image: node:14
   script:
   - npm install
 
 install_ang:
   stage: install_angular
-  image: node:16
+  image: node:14
   script:
   - npm install -D typescript @angular/cli @angular/compiler
   - npm link @angular/cli
 
 build_ang:
   stage: build
-  image: node:16
+  image: node:14
   script:
   - npm run build
