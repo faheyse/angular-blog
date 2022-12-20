@@ -6,6 +6,7 @@ import { FinanceComponent } from './finance/finance.component';
 import { HomeComponent } from './home/home.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import {CvComponent} from './cv/cv.component' ; 
+import { CollegeComponent} from './college/college.component';
 
 const routes: Routes = [
   {path: 'finance' , component:FinanceComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'books', component:BooksComponent},
   {path: 'timeline', component:TimelineComponent},
-  {path: 'cv', component:CvComponent}
+  {path: 'cv', component:CvComponent},
+  {path: 'college', component:CollegeComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,81 @@
+.chart-container {
+    width:75%;
+    height:35% ; 
+    position:relative ; 
+    top:25%; 
+    left:10% ; 
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.whiteboard {
+    top:8% ;
+    left:60%;
+    width:fit-content;
+    position: absolute;
+    color:black ; 
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: top;
+    align-items: top;
+    align-content: top;
+    text-align: top;
+    height:10%;
+}
+
+
+.textbox {
+    position:absolute;
+    left:4%;
+    top:5%;
+    padding:0% ; 
+    width:40% ; 
+    color:black ; 
+    font-size: 19;
+    font-weight: 300;
+    justify-content: center;
+    margin: 0% ;
+    height: 20%;
+    align-content: top;
+}
+
+
+article {
+    border: 2px solid black ; 
+    border-radius: 5px;
+    background-color: inherit;
+    position:relative;
+    width:61%;
+    left:10%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+}
+
+
+.btn-group button {
+    background-color: #ededed; 
+    border: 1px solid rgb(202, 202, 202); 
+    color: rgb(84, 84, 84); 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    float: left; 
+    margin-top:1% ; 
+    position: relative;
+    left:17% ; 
+    margin-top:10%;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+  button:hover {
+    opacity:1
+  }

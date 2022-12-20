@@ -3,14 +3,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400&display=swap" rel="stylesheet">
 </head>
-<body>
     <div class="bio-container">
-        <h3 style="margin-left:300px; margin-right:50; margin-top:5px; line-height: 40px;">
+        <!-- <h3 style="margin-left:300px; margin-right:50; margin-top:5px; line-height: 40px;" [ngStyle]="{'color':text_colour}">
             Sean's blog
-        </h3>
-        <p style="margin-left:0px; line-height: 40px;">
-            Hello and welcome to my blog. I'll be posting about things related to engineering, business, politics, sports and music.
-            Made using Angular and hosted on Google Cloud Platform. Feel free to contact me at seanfahey10@gmail.com. 
+        </h3> -->
+        <p style="margin-left:0px; line-height: 40px;" [ngStyle]="{'color':text_colour}">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+               esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
     </div>
-</body>
+    <img src="../../assets/sandhill.jpg" style="position:absolute;right:44%;bottom:8%; height:405px;">
+    <div style="position:absolute;right:25%;height:25%;width:18% ; bottom:27% ; font-family: 'IBM Plex Sans', sans-serif;font-size:17px;">
+        <p><i>Sand Hill Road, is an arterial road in western
+            Silicon Valley, California, running through Palo Alto, Menlo Park, and Woodside, notable for
+             its concentration of venture capital companies. The road has become a metonym for that industry;
+              nearly every top Silicon Valley company has been the beneficiary of early funding from firms on Sand Hill Road.
+           Its significance as a symbol of private equity and venture capitalism in the United States is compared to that of Wall Street
+            and the stock market, K Street in Washington, D.C. and political lobbying, Madison Avenue for the advertising industry,
+             or Harley Street in London, UK for private specialist medicine and surgery.
+        </i></p>
+        <p style="font-family: 'IBM Plex Sans', sans-serif; color:rgb(169, 169, 169)"> &nbsp;<b>- Wikipedia</b></p>
+    </div>

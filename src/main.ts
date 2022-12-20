@@ -8,5 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+export var background_colour:string = "green" ; 
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));

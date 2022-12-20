@@ -1,1 +1,19 @@
-<p>cv works!</p>
+<head>
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open-Sans">
+  </head>
+<body>
+    <div>
+      <h1 style="left:0px ;margin-bottom:1% ; width:25% ; top:0% ; position:absolute;margin-top:0%;  margin-right:10%;">Curriculum Vitae</h1>
+    </div>
+    <app-section [theme_text]="text" [theme_background]="background"></app-section>
+    <div class="toggle-container">
+        <button class="mdc-button mdc-button--raised" (click)="toggle()" style=" background-color: white ;  color: black; width:170px; height:40px;">
+            <span class="mdc-button__label">Toggle page colour</span>
+          </button>
+    </div>
+    <div class="link-container">
+      <p><b>Downloadable PDF: &nbsp; <a href="../assets/CV.pdf" download="CV.pdf"><u>CV.pdf</u></a></b></p>
+    </div>
+</body>

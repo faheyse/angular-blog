@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { outputAst } from '@angular/compiler';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bio',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class BioComponent implements OnInit {
 
   constructor() { }
+
+  @Input() text_colour:string = "" ; 
 
   ngOnInit(): void {
   }
