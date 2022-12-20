@@ -1,7 +1,10 @@
-image: alpine:latest
+image: nginx:1.17.1-alpine
 pages:
   stage: deploy
   script:
+  - npm install -g @angular/cli@14.2.0
+  - npm install
+  - ng build
   - mkdir .public
   - cp -r * .public
   - mv .public public
