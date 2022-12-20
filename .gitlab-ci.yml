@@ -1,15 +1,14 @@
-image: nginx:1.17.1-alpine
+image: node:14.15.0
 pages:
-  stage: deploy
+  cache:
+    paths:
+      - node_modules/
   script:
-  - npm install -g @angular/cli@14.2.0
-  - npm install
-  - ng build
-  - mkdir .public
-  - cp -r * .public
-  - mv .public public
+    - npm install -g @angular/cli@14.2.8
+    - npm install
+    - npm run buildProd
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - main
+    - main
