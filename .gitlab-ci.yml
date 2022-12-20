@@ -1,8 +1,8 @@
-image: node:latest
+image: alpine:latest
 pages:
   stage: deploy
   script:
-  - npm install -g @angular/cli
+  - npm install -g @angular/cli@14.2.0
   - npm install
   - ng build
   - mkdir .public
