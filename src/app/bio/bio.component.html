@@ -8,16 +8,16 @@
             Sean's blog
         </h3> -->
         <p style="margin-left:0px; line-height: 40px;" [ngStyle]="{'color':text_colour}">
-            Welcome to my blog. I'll be using this blog to post about anything I find interesting. It will also serve
+            Welcome to my blog. I'll be using it to post about anything I find interesting. It will also serve
             as a way to showcase the work I've done both as part of my engineering degree, and as part of my own 
             learning. For example, the 'Finance' section will take you through my journey through the world of finance.
             Please feel free to conatct me at faheyse@tcd.ie .
 
-            This website is made using <a href="https://angular.io/">Angular 15</a> and hosted on <a href="https://render.com">render.com</a>.
+            This website is made using <a href="https://angular.io/" [ngStyle]="{'color':text_colour}">Angular 15</a> and hosted on <a href="https://render.com" [ngStyle]="{'color':text_colour}">render.com</a>.
         </p>
     </div>
     <img src="../../assets/sandhill.jpg" style="position:absolute;right:44%;bottom:8%; height:405px;">
-    <div style="position:absolute;right:25%;height:25%;width:18% ; bottom:27% ; font-family: 'IBM Plex Sans', sans-serif;font-size:17px;">
+    <div style="position:absolute;right:25%;height:25%;width:18% ; bottom:27% ; font-family: 'IBM Plex Sans', sans-serif;font-size:17px;" [ngStyle]="{'color':text_colour}">
         <p><i>Sand Hill Road, is an arterial road in western
             Silicon Valley, California, running through Palo Alto, Menlo Park, and Woodside, notable for
              its concentration of venture capital companies. The road has become a metonym for that industry;
