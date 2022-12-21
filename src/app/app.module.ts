@@ -9,7 +9,6 @@ import { LinksComponent } from './links/links.component';
 import { BioComponent } from './bio/bio.component';
 import { HomeComponent } from './home/home.component';
 import { BooksComponent } from './books/books.component';
-import { TimelineComponent } from './timeline/timeline.component';
 import { CvComponent } from './cv/cv.component';
 import { SectionComponent } from './cv/section/section.component';
 import { LcComponent } from './cv/lc/lc.component';
@@ -27,7 +26,6 @@ import { CollegeComponent } from './college/college.component';
     BioComponent,
     HomeComponent,
     BooksComponent,
-    TimelineComponent,
     CvComponent,
     SectionComponent,
     LcComponent,
