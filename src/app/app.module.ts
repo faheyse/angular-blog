@@ -30,7 +30,7 @@ import { CollegeComponent } from './college/college.component';
     SectionComponent,
     LcComponent,
     CollegeComponent
-  ],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
