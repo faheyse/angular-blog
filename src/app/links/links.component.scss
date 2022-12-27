@@ -29,18 +29,26 @@
   .card {
     border-radius: 4px;
     background-color: #14162b;
-    height: 6%;
-    width: 75%;
+    height: 3vh;
+    width: 11vw;
     margin: 0 8px 15px;
-    padding: 20px;
+    padding: 9%;
     display: flex ;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
-    line-height: 15px;
+    line-height: 25%;
+
   }
 
+  span{
+    font-size:1vw;
+  }
+
+  .material-symbols-outlined{
+    font-size: 2vw;
+  }
 
 
 
@@ -58,11 +66,12 @@
 
 
 
-  d,
-  d:visited,
-  d:hover {
+  .d,
+  .d:visited,
+  .d:hover {
     text-decoration: none;
   }
+
 
 
     /* Responsive Styles */
