@@ -2,69 +2,69 @@
 
   <div class="card-container" *ngIf="text_colour == 'white'">
 
-    <a class="card" target="_blank" rel="noopener" href="cv" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
+ <!---->   <div class="card d" target="_blank" [routerLink]="['/cv']" rel="noopener" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid; text-decoration:none">
       <span class="material-symbols-outlined">Description </span>
       <span>CV</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="college" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/college']" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
       <span class="material-symbols-outlined">school</span>
       <span>College Work</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="https://gitlab.com" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
+    <div class="card d" target="_blank" rel="noopener" href="https://gitlab.com" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
       <!-- <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg> -->
       <span class="material-symbols-outlined"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gitlab"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path></svg></span>
       <!-- <span class="material-symbols-outlined"> database </span> -->
       <span>GitLab</span>
-    </a>
-    <a class="card" target="_blank" rel="noopener" href="finance" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
+    </div>
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/finance']" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
       <span class="material-symbols-outlined"> calculate </span>
       <span>Finance</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="books" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/books']" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
       <span class="material-symbols-outlined"> Book </span>
       <span>Book Reviews</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="/" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/']" [ngStyle]="{'background-color':bg_colour, 'color':text_colour}" style="border:2px white solid">
       <span class="material-symbols-outlined" >Newspaper </span>
       <span>Op-Ed</span>
-    </a>
+    </div>
   </div>
 
 
 <div class="card-container" *ngIf="text_colour == 'black'">
 
-    <a class="card" target="_blank" rel="noopener" href="cv" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/cv']" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
       <span class="material-symbols-outlined" style="color:black">Description </span>
       <span style="color:black">CV</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="college" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/college']" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
       <span class="material-symbols-outlined" style="color:black">school</span>
       <span style="color:black">College Work</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="https://gitlab.com" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
+    <div class="card d" target="_blank" rel="noopener" href="https://gitlab.com" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
       <span class="material-symbols-outlined" style="color:black"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gitlab"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path></svg></span>
       <span style="color:black">GitLab</span>
-    </a>
-    <a class="card" target="_blank" rel="noopener" href="finance" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
+    </div>
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/finance']" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
       <span class="material-symbols-outlined" style="color:black"> calculate </span>
       <span style="color:black">Finance</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="books" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/books']" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
       <span class="material-symbols-outlined" style="color:black"> Book </span>
       <span style="color:black">Book Reviews</span>
-    </a>
+    </div>
 
-    <a class="card" target="_blank" rel="noopener" href="/" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
+    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/']" [ngStyle]="{'background-color':bg_colour}" style="border:2px black solid">
       <span class="material-symbols-outlined" style="color:black">Newspaper </span>
       <span style="color:black">Op-Ed</span>
-    </a>
+    </div>
 
   </div>
 
