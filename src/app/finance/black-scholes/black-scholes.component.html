@@ -1,0 +1,122 @@
+<head>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+  </head>
+  
+    <div class="whiteboard">
+      <div [mathjax]="black_scholes" style="font-size:29 ;"></div>
+      <br><br>
+      <div [mathjax]="call" style="font-size:29 ;"></div>
+      <br><br>
+      <div [mathjax]="put" style="font-size:29 ;"></div>
+      <br><br>
+      <div [mathjax]="d1" style="font-size:29 ;"></div>
+      <br><br>
+      <div [mathjax]="d2" style="font-size:29 ;"></div>
+    </div>
+  
+    <div class="textbox">
+      <h2>
+        Black-Scholes Model
+      </h2>
+      <p style="margin:0%;padding:0%">
+        The Black-Scholes equation describes the relationship between the price of a share of a company's stock, and 
+        the value of a European-style option on that share. 
+        This PDE can be solved using boundary conditions for the price and time period, and assuming that the underlying stock yields no dividend.
+        The resulting formulae are P (for put options) and C (for call options), where d<sub>1</sub> and d<sub>2</sub> are latent values. 
+        <br>
+        Below are examples of calculations of call and put options for 3 different companies, with the strike price being at the money on day 0.. As we can see the value of each option bleeds towards the $0
+        profit price as the time gets closer to the maturity 
+      </p>
+      <!-- https://www.sofi.com/learn/content/what-is-the-black-scholes-model/  extra reading -->
+    </div>
+  
+  <div style="width:100%; position:absolute; top:40%;margin-top:1%">
+  
+  
+    <div class="btn-group">
+      <button [ngStyle]="{'background-color':button_bg[0]}" (click)="select(0)">GOOG</button>
+      <button [ngStyle]="{'background-color':button_bg[1]}" (click)="select(1)">AAPL</button>
+      <button [ngStyle]="{'background-color':button_bg[2]}" (click)="select(2)">MSFT</button>
+    </div>
+  
+    <div class="chart-container">
+      <div echarts [options]="options" class="demo-chart"></div>
+    </div>
+  
+  
+    <!-- codebeautify.org -->
+    <!-- python code for black-scholes demo (in IDE formatting) -->
+    <div style="width:fit-content;height:fit-content;left:10%;position:relative;top:45%">
+      <pre>
+          <code id="htmlViewer" style="color:rgb(171, 178, 191); font-weight:400;background-color:rgb(40, 44, 52);background:rgb(40, 44, 52);display:block;padding: .5em;"><span style="color:rgb(198, 120, 221); font-weight:400;">import</span> yfinance <span style="color:rgb(198, 120, 221); font-weight:400;">as</span> yf
+          <span style="color:rgb(198, 120, 221); font-weight:400;">from</span> scipy.stats <span style="color:rgb(198, 120, 221); font-weight:400;">import</span> norm
+          <span style="color:rgb(198, 120, 221); font-weight:400;">import</span> numpy <span style="color:rgb(198, 120, 221); font-weight:400;">as</span> np
+          <span style="color:rgb(198, 120, 221); font-weight:400;">import</span> urllib.request
+          <span style="color:rgb(198, 120, 221); font-weight:400;">from</span> math <span style="color:rgb(198, 120, 221); font-weight:400;">import</span> sqrt, exp
+          <span style="color:rgb(198, 120, 221); font-weight:400;">from</span> math <span style="color:rgb(198, 120, 221); font-weight:400;">import</span> log <span style="color:rgb(198, 120, 221); font-weight:400;">as</span> ln
+          <span style="color:rgb(198, 120, 221); font-weight:400;">import</span> matplotlib.pyplot <span style="color:rgb(198, 120, 221); font-weight:400;">as</span> plt
+          
+          ticker = <span style="color:rgb(152, 195, 121); font-weight:400;">&quot;GOOGL&quot;</span>
+          stock = yf.Ticker(ticker)
+          
+          returns = np.zeros(<span style="color:rgb(209, 154, 102); font-weight:400;">5</span>)
+          <span style="color:rgb(198, 120, 221); font-weight:400;">for</span> i <span style="color:rgb(198, 120, 221); font-weight:400;">in</span> <span style="color:rgb(230, 192, 123); font-weight:400;">range</span>(<span style="color:rgb(209, 154, 102); font-weight:400;">5</span>):
+              t0 = stock.history(start=<span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(<span style="color:rgb(209, 154, 102); font-weight:400;">2017</span>+i)+<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;-01-01&quot;</span>,end=<span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(<span style="color:rgb(209, 154, 102); font-weight:400;">2017</span>+i)+<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;-01-05&quot;</span>)
+              t1 = stock.history(start=<span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(<span style="color:rgb(209, 154, 102); font-weight:400;">2018</span>+i)+<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;-01-01&quot;</span>,end=<span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(<span style="color:rgb(209, 154, 102); font-weight:400;">2018</span>+i)+<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;-01-05&quot;</span>)
+              returns[i] = ( t1.at[<span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(t1.index[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>]).split()[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>],<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;Close&quot;</span>] - t0.at[<span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(t0.index[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>]).split()[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>],<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;Close&quot;</span>] ) / t0.at[<span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(t0.index[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>]).split()[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>],<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;Close&quot;</span>]
+          
+              
+          
+          var = np.var(returns)
+          
+          
+          fp = urllib.request.urlopen(<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;https://www.cnbc.com/quotes/US10Y&quot;</span>)
+          mystr = fp.read().decode(<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;utf8&quot;</span>)
+          fp.close()
+          quote = <span style="color:rgb(152, 195, 121); font-weight:400;">&quot;QuoteStrip-lastPrice\&quot;&quot;</span>
+          pos = mystr.find(quote) + <span style="color:rgb(230, 192, 123); font-weight:400;">len</span>(quote)
+          r = <span style="color:rgb(230, 192, 123); font-weight:400;">float</span>(mystr[pos+<span style="color:rgb(209, 154, 102); font-weight:400;">1</span>:pos+<span style="color:rgb(209, 154, 102); font-weight:400;">10</span>].split(<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;%&#x27;</span>)[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>])/<span style="color:rgb(209, 154, 102); font-weight:400;">100</span>
+          <span style="color:rgb(230, 192, 123); font-weight:400;">print</span>(<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;r = &#x27;</span>, r)
+          
+          T = <span style="color:rgb(209, 154, 102); font-weight:400;">1</span>
+          
+          
+          a = stock.history(period=<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;ytd&#x27;</span>)
+          asset = np.array(a[<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;Close&quot;</span>])
+          n = asset.size
+          
+          k = asset[<span style="color:rgb(209, 154, 102); font-weight:400;">0</span>]            <span style="color:rgb(92, 99, 112); font-weight:400;"># strike price at the money</span>
+          call = np.zeros(n)
+          put = np.zeros(n)
+          
+          <span style="color:rgb(198, 120, 221); font-weight:400;">for</span> i <span style="color:rgb(198, 120, 221); font-weight:400;">in</span> <span style="color:rgb(230, 192, 123); font-weight:400;">range</span>(n):
+              d1 = ( ln(asset[i]/k) + (r + var/<span style="color:rgb(209, 154, 102); font-weight:400;">2</span>)*(T - i/n) )/( sqrt(var)*sqrt(T- i/n) )
+              d2 = d1 - sqrt(var)*sqrt(T - i/n)
+              call[i] = norm.cdf(d1)*asset[i] -norm.cdf(d2)*k*exp(-r*(T - i/n))
+              put[i] = norm.cdf(-d2)*k*exp(-r*(T - i/n)) - norm.cdf(-d1)*asset[i]
+          
+          
+          time = np.arange(n)
+          
+          walk_file = <span style="color:rgb(230, 192, 123); font-weight:400;">open</span>(<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;./prices.csv&#x27;</span>, <span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;w&#x27;</span>)
+          <span style="color:rgb(198, 120, 221); font-weight:400;">for</span> t <span style="color:rgb(198, 120, 221); font-weight:400;">in</span> length(time):
+              walkfile.write(string(asset[t])+<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;,&#x27;</span> + string(put[t]) + <span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;,&#x27;</span> + string(call[i]) +<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;\n&#x27;</span>)
+          walk_file.close()
+          
+          
+          plt.plot(time, asset, linewidth=<span style="color:rgb(209, 154, 102); font-weight:400;">0.5</span>, label=<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;asset&quot;</span>)
+          plt.plot(time, put, linewidth=<span style="color:rgb(209, 154, 102); font-weight:400;">0.5</span>, label=<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;put&#x27;</span>, linestyle=<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;:&#x27;</span>)
+          plt.plot(time, call, linewidth=<span style="color:rgb(209, 154, 102); font-weight:400;">0.5</span>, label=<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;call&quot;</span>, linestyle=<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;-.&#x27;</span>)
+          
+          plt.plot()
+          plt.ylabel(<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;&#x27;</span>)
+          plt.xlabel(<span style="color:rgb(152, 195, 121); font-weight:400;">&#x27;&#x27;</span>)
+          plt.legend()
+          plt.title(<span style="color:rgb(152, 195, 121); font-weight:400;">&quot;Strike Price:  $&quot;</span> + <span style="color:rgb(230, 192, 123); font-weight:400;">str</span>(k) + <span style="color:rgb(152, 195, 121); font-weight:400;">&quot;        Ticker: \&#x27;&quot;</span> + ticker + <span style="color:rgb(152, 195, 121); font-weight:400;">&quot;\&#x27;&quot;</span>)
+          plt.show()
+        </code>
+      </pre>
+    </div>
+    
+  </div>

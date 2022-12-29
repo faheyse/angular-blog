@@ -5,20 +5,22 @@
         src="../../assets/palm_black.jpg"
         style="grid-row:0;grid-column:0;margin-left:5%"
         height="60vw"
+        width="85vw"
       />
     </div>
     <div *ngIf="!mode">
       <img
         alt="Angular Logo"
         src="../../assets/palm_white.jpg"
-        style="grid-row:0;grid-column:0;margin-left:5%"
+        style="grid-row:0;grid-column:0;margin-left:5%;"
         height="60vw"
+        width="85vw"
       />
     </div>
     <h2>Sean's Blog</h2>
-      <div class="bg-mode-container" style="grid-row:0;grid-column:4">
-        <button class="mdc-button mdc-button--raised" (click)="clickUpdate()" [ngStyle]="{'background-color': background_colour}" style="width:55%; height:7vh; border-radius:10px ;">
-            <span style="  font-family: 'IBM Plex Sans', sans-serif; font-weight:550; font-size:1vw;" [ngStyle]="{'color':text_colour}">Toggle Theme</span>
+      <div style="grid-row:0;grid-column:4;">
+        <button class="mdc-button mdc-button--raised" (click)="clickUpdate()" [ngStyle]="{'border-color': background_colour, 'color':background_colour,'background-color':text_colour}" style="width:55%; height:7vh; border-radius:10px ;cursor: pointer;min-height:35px">
+            <span style="  font-family: 'IBM Plex Sans', sans-serif; font-weight:550; font-size:1vw;">Toggle Theme</span>
           </button>
       </div>
   </div>

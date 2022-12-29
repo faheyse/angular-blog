@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import {CvComponent} from './cv/cv.component' ; 
 import { CollegeComponent} from './college/college.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { BlackScholesComponent } from './finance/black-scholes/black-scholes.component';
+import { OrftComponent } from './finance/orft/orft.component';
 
 const routes: Routes = [
   {path: 'finance' , component:FinanceComponent},
@@ -15,7 +17,10 @@ const routes: Routes = [
   {path: 'books', component:BooksComponent},
   {path: 'cv', component:CvComponent},
   {path: 'college', component:CollegeComponent},
-  {path: 'timeline', component:TimelineComponent}
+  {path: 'timeline', component:TimelineComponent},
+  {path: 'finance/black-scholes', component: BlackScholesComponent},
+  {path: 'finance/orft', component: OrftComponent}
+
 ];
 
 @NgModule({

@@ -15,6 +15,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { MathjaxModule } from "mathjax-angular";
 import { CollegeComponent } from './college/college.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { BlackScholesComponent } from './finance/black-scholes/black-scholes.component';
+import { OrftComponent } from './finance/orft/orft.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { TimelineComponent } from './timeline/timeline.component';
     SectionComponent,
     LcComponent,
     CollegeComponent,
-    TimelineComponent
+    TimelineComponent,
+    BlackScholesComponent,
+    OrftComponent
    ],
   imports: [
     BrowserModule,
