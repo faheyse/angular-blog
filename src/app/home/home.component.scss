@@ -21,7 +21,7 @@
  }
 
  .circle-container {
-    grid-column:0/span 2;
+    grid-column:0/span 10;
     grid-row:0/ span 2;
     display:flex;
     flex-wrap: wrap;
@@ -29,13 +29,14 @@
 
   .circle-link {
     z-index: 10;
-    height: 55%;
-    width: 21%;
-    border-radius: 40px;
+    height:3vw;
+    width: 3vw;
+    border-radius:100%;
     margin: 10px;
     background-color: white;
     border: 1px solid #eeeeee;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     cursor: pointer;

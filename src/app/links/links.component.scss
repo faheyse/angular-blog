@@ -8,15 +8,6 @@
   }
 
 
-  svg.material-icons {
-    height: 24px;
-    width: auto;
-  }
-
-  svg.material-icons:not(:last-child) {
-    margin-right:10px;
-  }
-
 
   .card-container {
     grid-row:3/4; 
@@ -39,7 +30,12 @@
     align-items: center;
     transition: all 0.2s ease-in-out;
     line-height: 25%;
+  }
 
+
+  .card:hover {
+    color:rgb(0, 234, 255);
+    border-color: rgb(0, 234, 255);;
   }
 
   span{
@@ -71,32 +67,3 @@
   .d:hover {
     text-decoration: none;
   }
-
-
-
-    /* Responsive Styles */
-    @media screen and (max-width: 767px) {
-        .card-container > *:not(.circle-link) ,
-    
-    
-        .card:not(.highlight-card) {
-          height: 16px;
-          margin: 1px 0;
-    
-        }
-    
-        .card.highlight-card span {
-          margin-left: 70px;
-        }
-    
-    
-      }
-    
-        .material-symbols-outlined {
-          font-variation-settings:
-          'FILL' 0,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 48 ; 
-          margin-right:10px;
-        }
