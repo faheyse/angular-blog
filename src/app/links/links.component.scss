@@ -12,7 +12,6 @@
   .card-container {
     grid-row:3/4; 
     grid-column: 0/1;
-
   }
 
 
@@ -28,9 +27,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s ease-in-out;
     line-height: 25%;
     cursor: pointer;
+    transition: .15s ease-out;
+
   }
 
 
@@ -53,6 +53,7 @@
     margin-right: 0;
     opacity: 100%;
     margin-left: 7px;
+    
   }
 
 

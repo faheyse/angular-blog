@@ -1,5 +1,7 @@
 .content {
     width:100%;height:100%;
+    transition: 0.5s ease-out;
+
 }
 
 
@@ -34,20 +36,19 @@
     width: 3vw;
     border-radius:100%;
     margin: 10px;
-    background-color: white;
-    border: 1px solid #eeeeee;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: 1s ease-out;
+    transition: 0.5s ease-out;
   }
 
   .circle-link:hover {
     transform: translateY(-0.25rem);
-    box-shadow: 0px 3px 15px rgb(0, 0, 0);
+    color: rgb(0, 234, 255);
+    border-color:rgb(0, 234, 255);
+
   }
 
   .bg {
@@ -56,6 +57,7 @@
     grid-template-rows: repeat(8, 1fr);
     height:100% ; 
     width:100% ; 
+    transition: ease-out 0.5s 0.6s;
   }
 
 span:hover {
