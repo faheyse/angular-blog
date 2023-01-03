@@ -1,2 +1,2 @@
-docker build . -t sfahey -q  --> outputs sha:container_id
+docker build . -t sfahey -q                   --> outputs sha:container_id
 docker run -p 8080:80 container_id
