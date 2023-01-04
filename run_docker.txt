@@ -1,5 +1,5 @@
 docker build . -t sfahey -q                   --> outputs sha:container_id
-docker run -p 8080:80 container_id
+docker run -p 8080:80 6356ff93a2c1
 
 
 docker push <repository_name>:TAG
