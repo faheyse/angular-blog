@@ -16,3 +16,7 @@ FROM nginx as runtime
 # Copy contents from the other container with alias "build" #
 # onto the specified path in the current container#
 COPY --from=build /app/dist/blog /usr/share/nginx/html
+
+
+# Expose port 80
+EXPOSE 80

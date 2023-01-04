@@ -67,6 +67,8 @@
 
   .d,
   .d:visited,
-  .d:hover {
+  a,
+  a:visited {
+    color:inherit;
     text-decoration: none;
   }
