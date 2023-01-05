@@ -19,5 +19,4 @@ COPY --from=build /app/dist/blog /usr/share/nginx/html
 
 
 # Expose port 80
-# EXPOSE 80
-EXPOSE 443
+EXPOSE 80

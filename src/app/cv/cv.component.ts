@@ -16,7 +16,7 @@ export class CvComponent implements OnInit {
 
   toggle():void {
     this.colour += 1 ; 
-    this.colour = this.colour % 5 ; 
+    this.colour = this.colour % 4 ; 
     this.invert() ; 
   }
 
@@ -36,12 +36,8 @@ export class CvComponent implements OnInit {
     this.text ="white"; 
   }
 
-  else if (this.colour == 3) {
-    this.background = "purple"; 
-    this.text ="white"; 
-  }
 
-  else if (this.colour == 4) {
+  else if (this.colour == 3) {
     this.background = "navy"; 
     this.text ="white"; 
   }
