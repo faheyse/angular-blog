@@ -15,7 +15,7 @@ import { MathjaxModule } from "mathjax-angular";
 import { CollegeComponent } from './college/college.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { BlackScholesComponent } from './finance/black-scholes/black-scholes.component';
-import { OrftComponent } from './finance/orft/orft.component';
+import { KellyComponent } from './finance/kelly/kelly.component';
 
 
 @NgModule({
@@ -31,7 +31,7 @@ import { OrftComponent } from './finance/orft/orft.component';
     CollegeComponent,
     TimelineComponent,
     BlackScholesComponent,
-    OrftComponent
+    KellyComponent
    ],
   imports: [
     BrowserModule,

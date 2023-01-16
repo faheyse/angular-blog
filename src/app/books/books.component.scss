@@ -1,0 +1,26 @@
+.book-review-grid {
+    display:grid ; 
+    grid-template-columns: 30vw 60vw;
+    grid-template-rows: 80vh;
+    position:absolute ; 
+    left:2vw ; 
+}
+
+.book-review-grid > div {
+    border-bottom: solid gray 2px ; 
+    padding: 5%;
+}
+
+img {
+    width:70%;
+    padding:10%; 
+}
+
+h2 {
+    margin-bottom:0% ; 
+    padding-bottom:0 ;
+}
+
+h3 {
+    margin-top: 2% ; 
+}

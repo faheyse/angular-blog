@@ -27,7 +27,7 @@
       </div>
   </div>
 
-  <div class="content">
+  <div class="content" [ngStyle]="{'background-color':background_colour,'color':text_colour}">
 
     <div class="bg" [ngStyle]="{'background-color':background_colour,'color':text_colour}">
 
@@ -52,9 +52,49 @@
             <app-links [text_colour]="text_colour" [bg_colour]="background_colour"></app-links>
         </div>
 
-        <div style="grid-row:1/span 5 ; grid-column:3/7 ;">
+        <div style="grid-row:2/span 2 ; grid-column:3/6 ;">
+            <p style="margin-left:0px; line-height: 160%;margin-bottom:0%" [ngStyle]="{'color':text_colour}">
+              Welcome to my (under construction) blog. I'll be using it to post about about about ideas I find interesting in many different formats. It will also serve
+              as a way to showcase the work I've done both as part of my engineering degree, and as part of my own 
+              learning. For example, the 'Finance' section will take you through my journey through the world of financial modelling.
+              Please feel free to conatct me at faheyse@tcd.ie .
+
+              This website is made using <a href="https://angular.io/" [ngStyle]="{'color':text_colour}">Angular 15</a> and hosted on <a href="https://cloud.google.com/" [ngStyle]="{'color':text_colour}">Google Cloud Platform</a>.
+            </p>
+        </div>
+
+        <div style="grid-row:9/span 1 ; grid-column:3/span 4 ; margin-left:2vw; margin-right:10vw ; color:grey ; font-size:1.1vw">
+          <p style="padding-right:10vw">
+            The first video is from the <a href="https://foundersfund.com">Founders Fund</a> 2020 annual meeting, 
+            which inspired me to make a part two, with things that inspire me and encapsulate the type of future I want to build. 
+          </p>
+        </div>
+
+
+
+        <div style="grid-row:4/span 5 ; grid-column:3 /span 3 ;height:59vh;  box-shadow:0px 0px 1.2vw 0.5vh grey">
+          <video controls width="100%" height="100%" style="float:top ; background-color:black"  preload  [controlsList]="'nodownload disablepictureinpicture noplaybackrate'">
+            <source src="../../assets/MynnUv_xH6BFqcJI (1).mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div style="grid-row:10/span 5 ; grid-column:3 /span 3 ;height:59vh; ;  box-shadow:0px 0px 1.2vw 0.5vh grey">
+          <video controls width="100%" height="100%" style="float:top ; background-color:black" poster="../../favicon.ico"  preload  [controlsList]="'nodownload disablepictureinpicture noplaybackrate'">
+            <source src="../../assets/FoundersFund - Made with Clipchamp.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        
+        <div style="grid-row:16/span 5 ; grid-column:3/6 ;">
             <app-bio [text_colour]="text_colour"></app-bio>
         </div>
+
+
+        <!-- <div style="grid-row:21/span 1 ;">
+        </div> -->
+
+
     </div>
 
 <div>
+
