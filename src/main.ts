@@ -3,7 +3,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './assets/environments/environment';
-import 'echarts/theme/dark.js';
 
 if (environment.production) {
   enableProdMode();
