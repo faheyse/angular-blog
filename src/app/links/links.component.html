@@ -2,10 +2,13 @@
 
   <div class="card-container" *ngIf="text_colour == 'white'" [ngStyle]="{'color':text_colour}">
 
- <!---->   <div class="card d" target="_blank" [routerLink]="['/cv']" rel="noopener" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid; text-decoration:none">
+    <!-- <div class="card d" target="_blank" [routerLink]="['/cv']" rel="noopener" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid; text-decoration:none"> -->
+  <a href="https://storage.googleapis.com/sfahey-videos/CV.pdf" download="CV.pdf">
+    <div class="card d"  [ngStyle]="{'background-color':bg_colour}" style="border:2px solid; text-decoration:none">
       <span class="material-symbols-outlined">Description </span>
       <span>CV</span>
     </div>
+  </a>
 
     <div class="card d" target="_blank" rel="noopener" [routerLink]="['/college']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid">
       <span class="material-symbols-outlined">school</span>
@@ -25,10 +28,10 @@
       <span>Finance</span>
     </div>
 
-    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/books']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid">
-      <span class="material-symbols-outlined"> Book </span>
-      <span>Book Reviews</span>
-    </div>
+    <!-- <div class="card d" target="_blank" rel="noopener" [routerLink]="['/books']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid"> -->
+      <!-- <span class="material-symbols-outlined"> Book </span> -->
+      <!-- <span>Book Reviews</span> -->
+    <!-- </div> -->
 
     <div class="card d" target="_blank" rel="noopener" [routerLink]="['/timeline']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid">
       <span class="material-symbols-outlined" >Newspaper </span>
@@ -39,10 +42,12 @@
 
 <div class="card-container" *ngIf="text_colour == 'black'">
 
+  <a href="https://storage.googleapis.com/sfahey-videos/CV.pdf" download="CV.pdf">
     <div class="card d" target="_blank" rel="noopener" [routerLink]="['/cv']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid">
       <span class="material-symbols-outlined" >Description </span>
       <span>CV</span>
     </div>
+  </a>
 
     <div class="card d" target="_blank" rel="noopener" [routerLink]="['/college']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid">
       <span class="material-symbols-outlined">school</span>
@@ -61,10 +66,10 @@
       <span>Finance</span>
     </div>
 
-    <div class="card d" target="_blank" rel="noopener" [routerLink]="['/books']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid">
-      <span class="material-symbols-outlined"> Book </span>
-      <span>Book Reviews</span>
-    </div>
+    <!-- <div class="card d" target="_blank" rel="noopener" [routerLink]="['/books']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid"> -->
+      <!-- <span class="material-symbols-outlined"> Book </span> -->
+      <!-- <span>Book Reviews</span> -->
+    <!-- </div> -->
 
     <div class="card d" target="_blank" rel="noopener" [routerLink]="['/timeline']" [ngStyle]="{'background-color':bg_colour}" style="border:2px solid">
       <span class="material-symbols-outlined">Newspaper </span>

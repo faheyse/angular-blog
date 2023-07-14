@@ -8,8 +8,6 @@ import { LinksComponent } from './links/links.component';
 import { BioComponent } from './bio/bio.component';
 import { HomeComponent } from './home/home.component';
 import { BooksComponent } from './books/books.component';
-import { CvComponent } from './cv/cv.component';
-import { SectionComponent } from './cv/section/section.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { MathjaxModule } from "mathjax-angular";
 import { CollegeComponent } from './college/college.component';
@@ -26,8 +24,6 @@ import { KellyComponent } from './finance/kelly/kelly.component';
     BioComponent,
     HomeComponent,
     BooksComponent,
-    CvComponent,
-    SectionComponent,
     CollegeComponent,
     TimelineComponent,
     BlackScholesComponent,
